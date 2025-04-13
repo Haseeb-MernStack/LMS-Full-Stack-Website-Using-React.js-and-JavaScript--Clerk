@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext, useState } from "react";
+import { Appcontext } from "../../context/AppContext";
+import { dummyDashboardData } from "../../assets/assets";
 
 const Dashboard = () => {
-  return (
-    <div>
-      Dashboard
-    </div>
-  )
-}
+  const { currency } = useContext(Appcontext);
+  const [dashboardData, setDashboardData] = useState(null);
 
-export default Dashboard
+  const fetchDashboardData = async () => {
+    setDashboardData(dummyDashboardData);
+  };
+
+  return <div>Dashboard</div>;
+};
+
+export default Dashboard;
