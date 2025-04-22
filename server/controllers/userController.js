@@ -2,7 +2,7 @@ import User from "../models/User.js";
 import Stripe from 'stripe';
 import { Purchase } from '../models/Purchase.js';
 import Course from "../models/Course.js";
-import { CourseProgress } from "../models/CourseProgress.js";
+import {CourseProgress}  from "../models/CourseProgress.js";
 
 // get User Data.
 export const getUserData = async (req, res) => {
@@ -108,7 +108,7 @@ export const purchaseCourse = async (req, res) => {
 };
 
 // update user course progress.
-export const updateCourseProgress = async (req, res) => {
+export const updateUserCourseProgress = async (req, res) => {
     try {
         const userId = req.auth.userId;
         const { courseId, lectureId } = req.body;
